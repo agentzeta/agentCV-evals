@@ -1,0 +1,1 @@
+export function wilsonInterval(successes,n,z=1.96){if(!Number.isInteger(n)||n<=0||successes<0||successes>n)throw Error('Invalid counts');const p=successes/n,den=1+z*z/n,center=(p+z*z/(2*n))/den,half=z*Math.sqrt(p*(1-p)/n+z*z/(4*n*n))/den;return [Math.max(0,center-half),Math.min(1,center+half)];}
